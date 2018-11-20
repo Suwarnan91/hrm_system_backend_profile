@@ -3,7 +3,10 @@ package com.sgic.hrm.entity;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -14,10 +17,15 @@ public class Referee implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = -2382706104002165442L;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String refereeName;
+	
+	@ManyToOne
 	private User userId;
+	
 	private String Address;
 	private String contactNo;
 	private String relationship;

@@ -11,13 +11,13 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "", schema = "profile")
-public class EmployeeProfessionalQualification implements Serializable {
+@Table(name="employee_professional_membership",schema="profile")
+public class EmployeeProfessionalMembership implements Serializable {
+
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 2001727149577562677L;
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private static final long serialVersionUID = 967358857731212374L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -25,10 +25,10 @@ public class EmployeeProfessionalQualification implements Serializable {
 	@ManyToOne
 	@JoinColumn(name="user_id")
 	private User userId;
-
+	
 	@ManyToOne
-	@JoinColumn(name="professionalqualification_id")
-	private ProfessionalQualification professionalQualificationId;
+	@JoinColumn(name="professional_membership_id")
+	private ProfessionalMembership professionalMembershipId;
 
 	public Integer getId() {
 		return id;
@@ -46,12 +46,18 @@ public class EmployeeProfessionalQualification implements Serializable {
 		this.userId = userId;
 	}
 
-	public ProfessionalQualification getProfessionalQualificationId() {
-		return professionalQualificationId;
+	public ProfessionalMembership getProfessionalMembershipId() {
+		return professionalMembershipId;
 	}
 
-	public void setProfessionalQualificationId(ProfessionalQualification professionalQualificationId) {
-		this.professionalQualificationId = professionalQualificationId;
+	public void setProfessionalMembershipId(ProfessionalMembership professionalMembershipId) {
+		this.professionalMembershipId = professionalMembershipId;
 	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	} 
+	
+	
 
 }
