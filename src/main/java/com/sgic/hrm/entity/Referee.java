@@ -3,6 +3,8 @@ package com.sgic.hrm.entity;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -14,6 +16,7 @@ public class Referee implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = -2382706104002165442L;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Id
 	private Integer id;
 	private String refereeName;

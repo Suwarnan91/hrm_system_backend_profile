@@ -3,6 +3,8 @@ package com.sgic.hrm.entity;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -15,7 +17,7 @@ public class EmployeeProfessionalQualification implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 2001727149577562677L;
-
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Id
 	private Integer id;
 	
