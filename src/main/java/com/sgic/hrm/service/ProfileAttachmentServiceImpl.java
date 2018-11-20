@@ -27,6 +27,12 @@ public class ProfileAttachmentServiceImpl implements ProfileAttachmentService{
 		return profileAttachmentRepository.findAll();
 	}
 
+	@Override
+	public void save(ProfileAttachments profileAttachments) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 
 }

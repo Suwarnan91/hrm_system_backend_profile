@@ -9,5 +9,6 @@ import com.sgic.hrm.entity.ProfileAttachments;
 public interface ProfileAttachmentService {
 	boolean addAttachment(ProfileAttachments profileAttachments);
 	List<ProfileAttachments> getAttachments();
+	void save(ProfileAttachments profileAttachments);
 	
 }
