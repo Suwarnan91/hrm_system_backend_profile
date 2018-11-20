@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 @Entity
 public class UserWorkExperience implements Serializable {
 	
@@ -16,26 +18,34 @@ public class UserWorkExperience implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Id
 	private Integer id;
-	private Integer userId;
-	private Integer experienceId;
+
+	@ManyToOne
+	@JoinColumn(name = "user_id")
+	private User userId;
+
+	@ManyToOne
+	@JoinColumn(name = "experience_id")
+	private WorkExperience experienceId;
+	
 	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public Integer getUserId() {
+	public User getUserId() {
 		return userId;
 	}
-	public void setUserId(Integer userId) {
+	public void setUserId(User userId) {
 		this.userId = userId;
 	}
-	public Integer getExperienceId() {
+	public WorkExperience getExperienceId() {
 		return experienceId;
 	}
-	public void setExperienceId(Integer experienceId) {
+	public void setExperienceId(WorkExperience experienceId) {
 		this.experienceId = experienceId;
 	}
+	
 	
 	
 	

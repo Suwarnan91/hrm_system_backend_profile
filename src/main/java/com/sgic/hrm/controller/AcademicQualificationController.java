@@ -8,11 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sgic.hrm.entity.AcademicQualification;
+
 import com.sgic.hrm.service.AcademicQualificationService;
 
 @RestController
@@ -38,6 +40,13 @@ public class AcademicQualificationController{
 			
 		}
 		
+
+		// get details of leave request by user id
+//		@GetMapping("/leaverequest/user/{userId}")
+//		public ResponseEntity<List<LeaveRequest>> findLeaveRequestByUserId(@PathVariable("userId") Integer id) {		
+//			List<LeaveRequest> leaveRequsetDetails = leaveRequestService.findByUserId(id);
+//			return new ResponseEntity<>(leaveRequsetDetails, HttpStatus.OK);
+//		}
 		
 	
 	
