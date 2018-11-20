@@ -17,6 +17,7 @@ public class ProfessionalQualification implements Serializable{
 	private static final long serialVersionUID = -783618122291051997L;
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String courseName;
 	private String courseType; 
