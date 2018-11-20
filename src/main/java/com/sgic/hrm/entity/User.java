@@ -18,7 +18,7 @@ public class User implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 8918656601415434315L;
-	
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;

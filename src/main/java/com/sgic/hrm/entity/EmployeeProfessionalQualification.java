@@ -17,7 +17,7 @@ public class EmployeeProfessionalQualification implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 2001727149577562677L;
-
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;

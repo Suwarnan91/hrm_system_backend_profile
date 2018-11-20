@@ -17,6 +17,7 @@ public class Referee implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = -2382706104002165442L;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
